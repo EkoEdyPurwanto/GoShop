@@ -1,4 +1,4 @@
-package app
+package router
 
 import (
 	"fmt"
@@ -17,6 +17,7 @@ func (server *Server) Initialize() {
 	fmt.Println("WELCOME TO GoShop")
 
 	server.Router = echo.New()
+	server.InitializeRouter()
 }
 
 func (server *Server) Run(addr string) {
